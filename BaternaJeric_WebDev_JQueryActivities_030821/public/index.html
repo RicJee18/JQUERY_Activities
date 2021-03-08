@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autobiography</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <style>
+    body {
+      background-image: url("../src/img/bg.jpg");
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: "Tahoma";
+      font-size: 14px;
+      color: #5f6368;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .btn {
+
+      background-color: red;
+      animation-name: example;
+      animation-duration: 4s;
+    }
+
+    @keyframes example {
+      0% {
+        background-color: red;
+      }
+
+      25% {
+        background-color: yellow;
+      }
+
+      50% {
+        background-color: blue;
+      }
+
+      100% {
+        background-color: green;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!--Profile Card 3-->
+  <center>
+    <div class="container w-50 mt-3">
+      <div class="card">
+        <div class="card-body">
+          <img src="https://cdn.wallpapersafari.com/22/58/gsWXM6.jpg" width="100%"
+            height="250">
+          <div style="margin-top: -190px;">
+            <img id="aprilImg" src="../src/img/mypic.jpg"
+              style="margin-top: 10px; border-radius:50%; border-style:solid; border-color: white; border:8px solid white"
+              width="250" height="250">
+          </div>
+          <div class="image-Descript" style="display: none;">
+            <h1>Jeric D. Baterna </h1>
+            <hr>
+            <div class="row justify-content-around text-left p-5 " style="margin-top: -35px;">
+              <div class="col-6">
+                <b>Nickname</b> : &nbsp;Ric Jee<br>
+                <b>Age</b>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; : 16 <br>
+                <b>Address</b>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; Medellin, Cebu<br>
+                <b>Status</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; Single<br>
+                <b>College</b>&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;University Of San Carlos<br>
+              </div>
+              <div class="col-6">
+                <b>Course</b>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; CCT<br>
+                <b>Motto</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; "Live Our Life To The
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fullest"<br>
+                <b>Hobby</b>&nbsp;&nbsp;&nbsp; : &nbsp;Writing Novels<br>
+                <b>Goal</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; Achieve my dreams in life<br>
+
+              </div>
+            </div>
+
+          </div>
+          <br>
+          <p>Hover my profile pic and you will know the SECRET:)</p>
+        </div>
+        <table class="justify-content-center " width="100%">
+          <td>
+            <hr />
+          </td>
+          <td style="width:5px; padding: 0 10px; white-space: nowrap;">
+            <h4>TESTIMONIALS</h4>
+          </td>
+          <td>
+            <hr />
+          </td>
+        </table>
+        <div class="row">
+          <div class="col-sm-6 pl-5 pt-5">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">April Diez</h5>
+                <hr>
+                <div class="mr-2" id="testimonial">
+                  <img class="friendPic1 rounded-circle"
+                    data-link="https://www.linkedin.com/in/april-grace-diez-b5a8951a1/ " src="../src/img/dangas.jpg" width="100"
+                    height="100">
+                  <br><br>
+                  <p id="testimony"  style="text-align: justify;"><i>"Out of all the scholars here in PN, I'm glad you're one of the scholars that
+                      became my friend. Jeric is a supportive friend even though he's crazy sometimes. But I like his
+                      personality or attitude so much and sometimes I like the way he approach me and care to me.  "</i>
+                  </p>
+                  <a id="resizePic1" href="#" class="btn btn-primary mt-3">Resize Me</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 pr-5 pt-5">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Raven Soriano Torres</h5>
+                <hr>
+                <div class="mr-2" id="testimonial">
+                  <img class="friendPic2 rounded-circle" data-link="www.linkedin.com/in/raven-torres-5594921aa"
+                    src="../src/img/raven.png" width="100" height="100">
+                  <br><br>
+                  <p id="testimony1" style="text-align: justify;"><i>"I knew Jeric back in my High School Days. He's a
+                      good artist: making slogans,
+                      posters, and what not. He also loves painting, as if he was born with a paint brush in his hands
+                      because he sure is good with that, mind me. He is very cute actually and stupid. "</i></p>
+                  <a id="resizePic2" href="#" class="btn btn-primary mt-3">Resize Me</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    </div>
+  </center>
+
+  <script>
+
+
+    //mouseenter
+    $('#aprilImg').mouseenter(function () {
+      $('.image-Descript').fadeToggle();
+    })
+    //mouseleave
+    $('#aprilImg').mouseleave(function () {
+      $('.image-Descript').fadeToggle();
+    })
+
+    $("#aprilImg").click(function () {
+      $(".testimonial").toggle();
+    })
+
+    $(".friendPic1").click(function () {
+      $("#testimony").toggle();
+    })
+
+    $(".friendPic2").click(function () {
+      $("#testimony1").toggle();
+    })
+    $(".friendPic1").dblclick(function () {
+      window.location.href = ($(this).data("link"));
+    })
+
+    $(".friendPic2").dblclick(function () {
+      window.location.href = ($(this).data("link"));
+    })
+
+    $("#resizePic1").click(function () {
+      $(".friendPic1").animate({
+
+        height: '200px',
+        width: '200px',
+
+      }, 6000);
+    })
+
+    $("#resizePic2").click(function () {
+      $(".friendPic2").animate({
+
+        height: '200px',
+        width: '200px',
+
+      }, 6000);
+    })
+
+  </script>
+</body>
+
+</html>
