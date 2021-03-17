@@ -6,62 +6,40 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Autobiography</title>
+  <link rel="stylesheet" href="../src/index.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <style>
-    body {
-      background-image: url("bg.jpg");
-      background-size: cover;
-      background-attachment: fixed;
-      font-family: "Tahoma";
-      font-size: 14px;
-      color: #5f6368;
-    }
-
-    .card {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    .btn {
-
-      background-color: red;
-      animation-name: example;
-      animation-duration: 4s;
-    }
-
-    @keyframes example {
-      0% {
-        background-color: red;
-      }
-
-      25% {
-        background-color: yellow;
-      }
-
-      50% {
-        background-color: blue;
-      }
-
-      100% {
-        background-color: green;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- jQuery Modal -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 
-<body>
+<body onload="myFunction()" class="body">
+  <!-- preloader -->
+  <div class="preload" id="preload">
+    <div class="logo">
+    </div>
+    <div class="loader-frame">
+      <div class="loader1" id="loader1">
+      </div>
+      <div class="loader2" id="loader2">
+      </div>
+      <div class="circle"></div>
+      <h1 class="hello">Welcome</h1>
+      <h5 class="welcome">Please wait ...</h5>
+    </div>
+  </div>
+
+
   <!--Profile Card 3-->
   <center>
-    <div class="container w-50 mt-3">
+
+    <div class="container w-50 mt-3" id="bio" style="display: none;">
       <div class="card">
         <div class="card-body">
-          <img src="https://cdn.wallpapersafari.com/22/58/gsWXM6.jpg" width="100%"
-            height="250">
+          <img src="https://cdn.wallpapersafari.com/22/58/gsWXM6.jpg" width="100%" height="250">
           <div style="margin-top: -190px;">
             <img id="aprilImg" src="../src/img/mypic.jpg"
               style="margin-top: 10px; border-radius:50%; border-style:solid; border-color: white; border:8px solid white"
@@ -107,16 +85,17 @@
           <div class="col-sm-6 pl-5 pt-5">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">April Diez</h5>
+                <h5 class="card-title" id="dataholder1">April Grace Diez</h5>
                 <hr>
                 <div class="mr-2" id="testimonial">
                   <img class="friendPic1 rounded-circle"
-                    data-link="https://www.linkedin.com/in/april-grace-diez-b5a8951a1/ " src="../src/img/dangas.jpg" width="100"
-                    height="100">
+                    data-link="https://www.linkedin.com/in/april-grace-diez-b5a8951a1/ " src="../src/img/dangas.jpg"
+                    width="100" height="100">
                   <br><br>
-                  <p id="testimony"  style="text-align: justify;"><i>"Out of all the scholars here in PN, I'm glad you're one of the scholars that
-                      became my friend. Jeric is a supportive friend even though he's crazy sometimes. But I like his
-                      personality or attitude so much and sometimes I like the way he approach me and care to me.  "</i>
+                  <p id="testimony1" style="text-align: justify;"><i>"Out of all the scholars here in PN, I'm glad
+                      you're one of the scholars that became my friend. Jeric is a supportive friend even though he's
+                      crazy sometimes.But I like his personality or attitude so much and sometimes I like the way he
+                      approach me and care to me."</i>
                   </p>
                   <a id="resizePic1" href="#" class="btn btn-primary mt-3">Resize Me</a>
                 </div>
@@ -126,79 +105,118 @@
           <div class="col-sm-6 pr-5 pt-5">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Raven Soriano Torres</h5>
+                <h5 class="card-title" id="dataholder2">Raven Soriano Torres</h5>
                 <hr>
                 <div class="mr-2" id="testimonial">
                   <img class="friendPic2 rounded-circle" data-link="www.linkedin.com/in/raven-torres-5594921aa"
                     src="../src/img/raven.png" width="100" height="100">
                   <br><br>
-                  <p id="testimony1" style="text-align: justify;"><i>"I knew Jeric back in my High School Days. He's a
-                      good artist: making slogans,
-                      posters, and what not. He also loves painting, as if he was born with a paint brush in his hands
-                      because he sure is good with that, mind me. He is very cute actually and stupid. "</i></p>
+                  <p class="testimony2" style="text-align: justify;"><i>"I knew Jeric back in my High School Days.
+                      He's
+                      a good artist: making slogans, posters, and what not. He also loves painting, as if he was born
+                      with a paint brush in his hands because he sure is good with that, mind me. He is very cute
+                      actually and stupid."</i></p>
                   <a id="resizePic2" href="#" class="btn btn-primary mt-3">Resize Me</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <br><br>
 
+        <table class="justify-content-center mt-5 " width="100%">
+          <td>
+            <hr />
+          </td>
+          <td style="width:5px; padding: 0 10px; white-space: nowrap;">
+            <h4>COMMENTS</h4>
+          </td>
+          <td>
+            <hr />
+          </td>
+        </table>
+
+        <br><br>
+        <div class="row">
+
+          <div class="col-lg-10 ml-5 pt-1 w-100 ">
+            <div class="card">
+              <div class="card-header mx-1 p-3 bg-dark text-white">
+                <img src="../src/img/mypic.jpg" class="rounded-circle float-left ml-2 mt-1" alt="" width="40"
+                  height="40">
+                <h6 class="text-left ml-5 mt-2"><strong>&nbsp;&nbsp;Prince Ric Jee Baterna </strong>updated his
+                  profile
+                  picture.<br><small><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About a minute ago ...</i></small></h6>
+              </div>
+              <div class="card-body text-left">
+                <p><b> - Manager of Passerelles Numeriques Philippines :)<br>&nbsp;#PNP21</b></p>
+                <img src="../src/img/profile.jpg" width="100%" height="290">
+
+                <div class="mr-2">
+                  <br><br>
+                  <p style="text-align: justify;" class="dataholder1">Name : <b id="comment1"></b>
+                  <p style="text-align: justify;" class="dataholder2">Comment : <b id="comment2"></b>
+
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <table class="justify-content-center mt-5 " width="100%">
+          <td>
+            <hr />
+          </td>
+          <td style="width:5px; padding: 0 10px; white-space: nowrap;">
+            <h4>ALBUMS</h4>
+          </td>
+          <td>
+            <hr />
+          </td>
+        </table>
+
+        <br>
+        <div class="row">
+          <div class="col-lg-10 ml-5 pt-1 w-100 ">
+            <div class="card">
+              <div class="card-header mx-1 p-3  text-white">
+                <div class="w3-row-padding w3-padding-16 w3-center mr-3">
+                  <div class="w3-quarter">
+                    <img class="lightbox" src="../src/img/mypic.jpg" style="width:100%; height:100%;" class="w3-hover-opacity" />
+                  </div>
+                  <div class="w3-quarter">
+                    <img class="lightbox" src="../src/img/mypic.jpg" style="width:100% ;height:100%;" class="w3-hover-opacity" />
+                  </div>
+                  <div class="w3-quarter">
+                    <img class="lightbox" src="../src/img/mypic.jpg" style="width:100%;height:100%;" class="w3-hover-opacity" />
+                  </div>
+                  <div class="w3-quarter">
+                    <img class="lightbox" src="../src/img/mypic.jpg" style="width:100%; height:100%;" class="w3-hover-opacity" />
+                  </div>
+                  <div class="w3-quarter">
+                    <img class="lightbox" src="../src/img/mypic.jpg" style="width:100%; height:100%;" class="w3-hover-opacity" />
+                  </div>
+                  <div class="w3-quarter">
+                    <img class="lightbox" src="../src/img/mypic.jpg" style="width:100%;height:100%;" class="w3-hover-opacity" />
+                  </div>
+                  <div class="w3-quarter">
+                    <img class="lightbox" src="../src/img/mypic.jpg" style="width:100%; height:100%;" class="w3-hover-opacity" />
+                  </div>
+                  <div class="w3-quarter">
+                    <img class="lightbox" src="../src/img/mypic.jpg" style="width:100%; height:100%;" class="w3-hover-opacity" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br><br>
       </div>
-    </div>
     </div>
   </center>
 
-  <script>
 
-
-    //mouseenter
-    $('#aprilImg').mouseenter(function () {
-      $('.image-Descript').fadeToggle();
-    })
-    //mouseleave
-    $('#aprilImg').mouseleave(function () {
-      $('.image-Descript').fadeToggle();
-    })
-
-    $("#aprilImg").click(function () {
-      $(".testimonial").toggle();
-    })
-
-    $(".friendPic1").click(function () {
-      $("#testimony").toggle();
-    })
-
-    $(".friendPic2").click(function () {
-      $("#testimony1").toggle();
-    })
-    $(".friendPic1").dblclick(function () {
-      window.location.href = ($(this).data("link"));
-    })
-
-    $(".friendPic2").dblclick(function () {
-      window.location.href = ($(this).data("link"));
-    })
-
-    $("#resizePic1").click(function () {
-      $(".friendPic1").animate({
-
-        height: '200px',
-        width: '200px',
-
-      }, 6000);
-    })
-
-    $("#resizePic2").click(function () {
-      $(".friendPic2").animate({
-
-        height: '200px',
-        width: '200px',
-
-      }, 6000);
-    })
-
-  </script>
+  <script src="jquery-ajax.js"></script>
 </body>
 
 </html>
